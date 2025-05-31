@@ -42,3 +42,29 @@ body {
     margin: 5px 0;
   }
   
+  body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  body.dark section {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
+  body.dark .task {
+    background-color: #263238;
+    border-left-color: #90caf9;
+  }
+  body.dark .editing {
+    background-color: #37474f !important;
+    border-left-color: #fdd835 !important;
+  }
+  body.dark header {
+    background: linear-gradient(90deg, #263238, #37474f);
+  }
+  body.dark button {
+    background-color: #607d8b;
+  }
+  body.dark button:hover {
+    background-color: #455a64;
+  }
+  
