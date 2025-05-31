@@ -1,0 +1,61 @@
+<!-- Rozbudowana wersja index.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow – System Zarzadzania Zadaniami</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>TaskFlow</h1>
+    <p>System zarzadzania zadaniami – prototyp</p>
+  </header>
+
+  <section id="task-form">
+    <h2>Dodaj nowe zadanie</h2>
+    <input type="text" id="task-title" placeholder="Tytul zadania">
+    <textarea id="task-desc" placeholder="Opis zadania"></textarea>
+    <input type="date" id="task-date">
+    <select id="task-priority">
+      <option value="">Wybierz priorytet</option>
+      <option value="wysoki">Wysoki</option>
+      <option value="sredni">Sredni</option>
+      <option value="niski">Niski</option>
+    </select>
+    <select id="task-category">
+      <option value="">Wybierz kategorie</option>
+      <option value="praca">Praca</option>
+      <option value="dom">Dom</option>
+      <option value="inne">Inne</option>
+    </select>
+    <input type="text" id="task-tags" placeholder="Tagi, np. pilne, raport">
+    <button onclick="addTask()">Dodaj</button>
+  </section>
+
+  <section id="filters">
+    <h2>Filtry</h2>
+    <input type="text" id="filter-title" placeholder="Szukaj po tytule" oninput="filterTasks()">
+    <select id="filter-category" onchange="filterTasks()">
+      <option value="">Wszystkie kategorie</option>
+      <option value="praca">Praca</option>
+      <option value="dom">Dom</option>
+      <option value="inne">Inne</option>
+    </select>
+    <select id="filter-priority" onchange="filterTasks()">
+      <option value="">Wszystkie priorytety</option>
+      <option value="wysoki">Wysoki</option>
+      <option value="sredni">Sredni</option>
+      <option value="niski">Niski</option>
+    </select>
+  </section>
+
+  <section id="task-list">
+    <h2>Lista zadan</h2>
+    <!-- Zadania beda tutaj renderowane -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
